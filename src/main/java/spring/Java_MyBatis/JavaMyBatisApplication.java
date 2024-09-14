@@ -9,5 +9,4 @@ public class JavaMyBatisApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JavaMyBatisApplication.class, args);
 	}
-
 }
