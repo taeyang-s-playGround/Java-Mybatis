@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id("org.springframework.boot") version "2.7.16"
-	id("io.spring.dependency-management") version "1.1.4"
+	id 'org.springframework.boot' version '3.2.9'
+	id 'io.spring.dependency-management' version '1.1.6'
 }
 
 group = 'spring'
@@ -24,16 +24,33 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-security'
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	//mybatis
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+
+	//jwt
+	implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+	//security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
+	//validation
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+	//mysql
+	runtimeOnly 'com.mysql:mysql-connector-j'
+
+	//lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+
+	//test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
 	testImplementation 'org.springframework.security:spring-security-test'
+
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
+
 }
 
 tasks.named('test') {
