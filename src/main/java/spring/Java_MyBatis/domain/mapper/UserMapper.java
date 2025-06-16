@@ -3,6 +3,7 @@ package spring.Java_MyBatis.domain.mapper;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
+import org.springframework.stereotype.Component;
 
 @Mapper
 public interface UserMapper {
