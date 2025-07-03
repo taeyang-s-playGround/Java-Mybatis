@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="spring.Java_MyBatis.domain.mapper.UserMapper">
+
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user_tbl (username, account_id)
+        VALUES (#{username}, #{accountId})
+    </insert>
+
+    <select id="allUserNames" resultType="string">
+        SELECT username FROM user_tbl
+    </select>
+    
+    <select id="findByUserName" resultType="spring.Java_MyBatis.domain.entity.User">
+        SELECT * FROM user_tbl WHERE username = #{username}
+    </select>
+</mapper>

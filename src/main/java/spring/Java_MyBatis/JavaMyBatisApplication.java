@@ -8,7 +8,7 @@ import spring.Java_MyBatis.domain.config.MyBatisConfig;
 
 @SpringBootApplication
 @MapperScan("spring.Java_MyBatis.domain.mapper")
-@Import(MyBatisConfig.clas)
+@Import(MyBatisConfig.class)
 public class JavaMyBatisApplication {
 
 	public static void main(String[] args) {
