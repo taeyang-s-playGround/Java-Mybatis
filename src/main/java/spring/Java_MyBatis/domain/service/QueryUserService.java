@@ -1,19 +1,11 @@
 package spring.Java_MyBatis.domain.service;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import spring.Java_MyBatis.domain.controller.dto.SignupRequest;
-import spring.Java_MyBatis.domain.mapper.UserMapper;
+import org.springframework.http.ResponseEntity;
+import spring.Java_MyBatis.domain.entity.User;
 
 import java.util.List;
 
-@Service
-@RequiredArgsConstructor
-public class QueryUserService {
+public interface QueryUserService {
 
-    private final UserMapper userMapper;
-
-    public List<String> execute() {
-        return userMapper.allUserNames();
-    }
+    public ResponseEntity<List<User>> execute();
 }

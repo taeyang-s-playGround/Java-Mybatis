@@ -1,13 +1,15 @@
 package spring.Java_MyBatis.domain.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import spring.Java_MyBatis.domain.controller.dto.SignupRequest;
-import spring.Java_MyBatis.domain.service.QueryUserService;
+import spring.Java_MyBatis.domain.entity.User;
+import spring.Java_MyBatis.domain.service.QueryUserServiceImpl;
 import spring.Java_MyBatis.domain.service.UserService;
 
 import java.util.List;
@@ -18,7 +20,7 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-    private final QueryUserService queryUserService;
+    private final QueryUserServiceImpl queryUserService;
 
     @PostMapping("/signup")
     public void signup(@RequestBody SignupRequest request) {
@@ -26,7 +28,7 @@ public class UserController {
     }
 
     @GetMapping
-    public List<String> getAllUserName() {
+    public ResponseEntity<List<User>> getAllUserName() {
         return queryUserService.execute();
     }
 }
