@@ -24,6 +24,7 @@ chatgpt:
   api-key: ${OPEN_AI_KEY:asdfghjkl}
 
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
+  mapper-locations: classpath:mapper/**/*.xml
+  type-aliases-package: spring.Java_MyBatis
   configuration:
     map-underscore-to-camel-case: true

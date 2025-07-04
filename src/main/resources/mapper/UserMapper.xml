@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
@@ -9,8 +9,9 @@
         VALUES (#{username}, #{accountId})
     </insert>
 
-    <select id="allUserNames" resultType="string">
-        SELECT username FROM user_tbl
+    <select id="getAllUsername" resultType="spring.Java_MyBatis.domain.entity.User">
+        SELECT * FROM
+            user_tbl
     </select>
     
     <select id="findByUserName" resultType="spring.Java_MyBatis.domain.entity.User">
