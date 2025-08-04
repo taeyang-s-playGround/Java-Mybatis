@@ -1,6 +1,7 @@
 package spring.Java_MyBatis.domain.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import spring.Java_MyBatis.domain.entity.User;
@@ -12,9 +13,9 @@ import java.util.Optional;
 @Repository
 public interface UserMapper {
 
-    void save(String username, String accountId);
+    void save(@Param("username") String username, @Param("account_id") String accountId, @Param("password")String password);
 
-    ResponseEntity<List<User>> getAllUsername();
+    List<User> getAllUsers(); // getAllUsername을 getAllUsers로 변경
 
-    Optional<User> findByUserName(String username);
+    Optional<User> findByUserName(@Param("username") String username);
 }
