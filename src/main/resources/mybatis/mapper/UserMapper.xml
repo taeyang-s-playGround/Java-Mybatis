@@ -10,9 +10,9 @@
     </sql>
 
     <!-- 유저 저장 -->
-    <insert id="save" useGeneratedKeys="true" keyProperty="user.id">
-        INSERT INTO users (username, account_id, password)
-        VALUES (#{user.username}, #{user.accountId}, #{user.password})
+    <insert id="signup">
+        INSERT INTO tbl_user (username, account_id, password)
+        VALUES (#{username}, #{account_id}, #{password})
     </insert>
 
     <!-- 전체 유저 조회 -->

@@ -32,6 +32,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void signup(SignupRequest request) {
-        userMapper.save(request.getUsername(), request.getAccountId(),  request.getPassword());
+        userMapper.signup(request.getUsername(), request.getAccountId(),  request.getPassword());
     }
 }

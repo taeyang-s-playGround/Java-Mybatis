@@ -13,7 +13,7 @@ import java.util.Optional;
 @Repository
 public interface UserMapper {
 
-    void save(@Param("username") String username, @Param("account_id") String accountId, @Param("password")String password);
+    void signup(@Param("username") String username, @Param("account_id") String accountId, @Param("password")String password);
 
     List<User> getAllUsers(); // getAllUsername을 getAllUsers로 변경
 
