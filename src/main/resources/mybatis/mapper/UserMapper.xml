@@ -17,12 +17,17 @@
 
     <!-- 전체 유저 조회 -->
     <select id="getAllUsers" resultType="spring.Java_MyBatis.domain.entity.User">
-        SELECT <include refid="userColumns" /> FROM tbl_user
+        SELECT <include refid="userColumns"/> FROM tbl_user
+    </select>
+
+    <!-- 유저명으로 조회 -->
+    <select id="getUserById" resultType="spring.Java_MyBatis.domain.entity.User">
+        SELECT <include refid="userColumns" /> FROM tbl_user WHERE id = #{user_id}
     </select>
 
     <!-- 유저명으로 조회 -->
     <select id="findByUserName" resultType="spring.Java_MyBatis.domain.entity.User">
-        SELECT <include refid="userColumns" /> FROM tbl_user WHERE username = #{user.username}
+        SELECT <include refid="userColumns" /> FROM tbl_user WHERE username = #{username}
     </select>
 
 </mapper>

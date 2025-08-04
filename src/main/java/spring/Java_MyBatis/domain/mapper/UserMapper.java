@@ -17,5 +17,7 @@ public interface UserMapper {
 
     List<User> getAllUsers(); // getAllUsername을 getAllUsers로 변경
 
+    Optional<User> getUserById(@Param("user_id") Long userId);
+
     Optional<User> findByUserName(@Param("username") String username);
 }
