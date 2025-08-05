@@ -19,8 +19,12 @@ configurations {
 	}
 }
 
+
 repositories {
 	mavenCentral()
+	maven {
+		url "https://maven.oracle.com"
+	}
 }
 
 dependencies {
@@ -40,9 +44,9 @@ dependencies {
 	//validation
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-	//mysql
-	runtimeOnly 'com.mysql:mysql-connector-j'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	//Oracle
+	implementation 'com.oracle.database.jdbc:ojdbc11:23.3.0.23.09'
+
 
 	//lombok
 	compileOnly 'org.projectlombok:lombok'
