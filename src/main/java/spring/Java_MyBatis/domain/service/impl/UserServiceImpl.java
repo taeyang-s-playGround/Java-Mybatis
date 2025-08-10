@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     private final UserMapper userMapper;
 
     @Override
-    public List<GetUserResponse> getAllUserName() {
+    public List<GetUserResponse> getAllUser() {
         List<User> users = userMapper.getAllUsers();
 
         return users.stream()

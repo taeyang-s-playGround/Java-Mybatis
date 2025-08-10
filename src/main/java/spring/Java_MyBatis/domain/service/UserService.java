@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface UserService {
 
-    List<GetUserResponse> getAllUserName();
+    List<GetUserResponse> getAllUser();
 
     void signup(SignupRequest request);
 
