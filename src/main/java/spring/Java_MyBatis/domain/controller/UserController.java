@@ -1,9 +1,9 @@
 package spring.Java_MyBatis.domain.controller;
 
-import ch.qos.logback.core.model.Model;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import spring.Java_MyBatis.domain.dto.GetUserResponse;
 import spring.Java_MyBatis.domain.dto.SignupRequest;
@@ -29,14 +29,11 @@ public class UserController {
         userService.signup(request);
     }
 
-    /*
     @GetMapping
     public String getAllUserName(Model model) {
         model.addAttribute("users", userService.getAllUser());
         return "user-list"; // templates/user-list.ftl
     }
-
-     */
 
     @GetMapping
     public List<GetUserResponse> getAllUserName() {
