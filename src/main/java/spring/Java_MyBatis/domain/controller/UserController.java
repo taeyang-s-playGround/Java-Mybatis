@@ -29,10 +29,11 @@ public class UserController {
         userService.signup(request);
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public String getAllUserName(Model model) {
-        model.addAttribute("users", userService.getAllUser());
-        return "user-list"; // templates/user-list.ftl
+        List<GetUserResponse> users = userService.getAllUser();
+        model.addAttribute("users", users);
+        return "user-list"; // templates/user-list.ftl 렌더링
     }
 
     @GetMapping
