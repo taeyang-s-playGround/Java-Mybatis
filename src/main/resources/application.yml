@@ -9,6 +9,11 @@ spring:
   jackson:
     property-naming-strategy: SNAKE_CASE
 
+  freemarker:
+    template-loader-path: classpath:/templates/  # .ftl 파일 위치
+    suffix: .ftl
+    charset: UTF-8
+    content-type: text/html
 
 jwt:
   header: ${HEADER:Authorization}

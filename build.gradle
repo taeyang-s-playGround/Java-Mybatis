@@ -29,7 +29,10 @@ repositories {
 
 dependencies {
 
-	//default
+	//freemarker
+	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+
+	//web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	//mybatis
@@ -46,7 +49,6 @@ dependencies {
 
 	//Oracle
 	implementation 'com.oracle.database.jdbc:ojdbc11:23.3.0.23.09'
-
 
 	//lombok
 	compileOnly 'org.projectlombok:lombok'
