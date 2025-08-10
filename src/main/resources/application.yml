@@ -14,6 +14,8 @@ spring:
     suffix: .ftl
     charset: UTF-8
     content-type: text/html
+    settings:
+      classic_compatible: true
 
 jwt:
   header: ${HEADER:Authorization}
